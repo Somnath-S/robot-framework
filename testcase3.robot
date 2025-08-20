@@ -16,4 +16,4 @@ Verify Username And Password Fields
     Wait For Elements State    css=input._55r1._1kbt    visible    5s
 
     Sleep    3s
-    Close Browser
+    Close Browser # close the browser
