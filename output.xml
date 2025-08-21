@@ -1,196 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-18T12:25:27.061139" rpa="false" schemaversion="5">
-<suite id="s1" name="Testcase1" source="D:\mindmerge\Robot framework\github\two\testcase1.robot">
-<test id="s1-t1" name="Verify Username And Password Fields" line="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-20T20:46:25.952619" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcase4" source="D:\mindmerge\Robot framework\github\two\testcase4.robot">
+<test id="s1-t1" name="Login With Invalid Password" line="26">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-08-20T20:46:26.314002" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\mindmerge\\Robot framework\\github\\two\\browser\\traces\\temp\\1a1c0507-c878-4de0-994a-9b4029e6a3f3"}</msg>
+<msg time="2025-08-20T20:46:26.370026" level="INFO">Starting Browser process C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:63015</msg>
+<msg time="2025-08-20T20:46:28.484875" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\mindmerge\\Robot framework\\github\\two\\browser\\traces\\temp\\1a1c0507-c878-4de0-994a-9b4029e6a3f3"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-08-20T20:46:26.312479" elapsed="2.172766"/>
+</kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-08-18T12:25:27.467668" level="INFO">Starting Browser process C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:57288</msg>
-<msg time="2025-08-18T12:25:32.871628" level="INFO">Successfully initialized new page object and opened url: https://www.facebook.com/login/</msg>
-<msg time="2025-08-18T12:25:32.871772" level="INFO">No browser and context was open. New browser and context was automatically opened when page is created.</msg>
-<arg>https://www.facebook.com/login/</arg>
-<arg>wait_until=load</arg>
+<msg time="2025-08-20T20:46:32.043892" level="INFO">Successfully initialized new page object and opened url: https://www.facebook.com/login/</msg>
+<msg time="2025-08-20T20:46:32.044026" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-08-18T12:25:27.430367" elapsed="5.441736"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-08-18T12:25:32.986217" level="INFO">Waited for Element with selector input[name="email"] at state visible</msg>
-<arg>input[name="email"]</arg>
-<arg>visible</arg>
-<arg>timeout=20s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-08-18T12:25:32.887185" elapsed="0.099434"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-08-18T12:25:33.001724" level="INFO">Waited for Element with selector input[name="pass"] at state visible</msg>
-<arg>input[name="pass"]</arg>
-<arg>visible</arg>
-<arg>timeout=20s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-08-18T12:25:32.987352" elapsed="0.014648"/>
-</kw>
-<kw name="Get Title" owner="Browser">
-<msg time="2025-08-18T12:25:33.017114" level="INFO">Title: 'Facebook मध्\u200dये लॉग इन करा'</msg>
-<arg>contains</arg>
-<arg>Facebook</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-08-18T12:25:33.002692" elapsed="0.015239"/>
-</kw>
-<kw name="Get Attribute" owner="Browser">
-<msg time="2025-08-18T12:25:33.077075" level="INFO">Attribute is: 'email'</msg>
-<arg>input[name="email"]</arg>
-<arg>name</arg>
-<arg>==</arg>
-<arg>email</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-08-18T12:25:33.018617" elapsed="0.058745"/>
-</kw>
-<kw name="Get Attribute" owner="Browser">
-<msg time="2025-08-18T12:25:33.115956" level="INFO">Attribute is: 'pass'</msg>
-<arg>input[name="pass"]</arg>
-<arg>name</arg>
-<arg>==</arg>
-<arg>pass</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-08-18T12:25:33.080698" elapsed="0.035451"/>
+<status status="PASS" start="2025-08-20T20:46:28.505036" elapsed="3.539329"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2025-08-18T12:25:33.117798" level="INFO">Fills the text 'test@example.com' in the given field.</msg>
-<arg>input[name="email"]</arg>
-<arg>test@example.com</arg>
+<msg time="2025-08-20T20:46:32.046648" level="INFO">Fills the text 'testuser@example.com' in the given field.</msg>
+<arg>input#email</arg>
+<arg>${USERNAME}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-08-18T12:25:33.116759" elapsed="0.051212"/>
+<status status="PASS" start="2025-08-20T20:46:32.045570" elapsed="0.104708"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2025-08-18T12:25:33.169639" level="INFO">Fills the text 'secret123' in the given field.</msg>
-<arg>input[name="pass"]</arg>
-<arg>secret123</arg>
+<msg time="2025-08-20T20:46:32.153326" level="INFO">Fills the text 'wrongpassword' in the given field.</msg>
+<arg>input#pass</arg>
+<arg>${PASSWORD}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-08-18T12:25:33.168545" elapsed="0.030538"/>
+<status status="PASS" start="2025-08-20T20:46:32.151174" elapsed="0.030438"/>
 </kw>
-<msg time="2025-08-18T12:25:33.231355" level="INFO">Switching context to context=57bc5c43-44a4-4ca1-a0f0-ff0669945e53 in CURRENT</msg>
-<msg time="2025-08-18T12:25:33.248736" level="INFO">Successfully changed active context: context=57bc5c43-44a4-4ca1-a0f0-ff0669945e53</msg>
-<msg time="2025-08-18T12:25:33.266784" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2025-08-18T12:25:27.428977" elapsed="5.770834"/>
-</test>
-<test id="s1-t2" name="Verify Username And Password Fields" line="18">
-<kw name="New Page" owner="Browser">
-<msg time="2025-08-18T12:25:34.579662" level="INFO">Successfully initialized new page object and opened url: https://www.facebook.com/login/</msg>
-<msg time="2025-08-18T12:25:34.579843" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
-<arg>https://www.facebook.com/login/</arg>
-<arg>wait_until=load</arg>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-08-20T20:46:32.183009" level="FAIL">Keyword 'Browser.Wait For Elements State' expected 1 to 4 arguments, got 0.</msg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2025-08-20T20:46:32.182104" elapsed="0.000994">Keyword 'Browser.Wait For Elements State' expected 1 to 4 arguments, got 0.</status>
+</kw>
+<kw name="Click" owner="Browser">
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-08-20T20:46:32.184909" elapsed="0.000806"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>css=div._9ay7</arg>
+<arg>visible</arg>
+<arg>5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2025-08-20T20:46:32.187461" elapsed="0.001507"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<var>${error}</var>
+<arg>css=div._9ay7</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-08-20T20:46:32.190418" elapsed="0.000451"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${error}</arg>
+<arg>incorrect</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2025-08-20T20:46:32.191411" elapsed="0.000331"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<status status="PASS" start="2025-08-18T12:25:33.323889" elapsed="1.256314"/>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-08-20T20:46:32.192816" elapsed="0.000544"/>
 </kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-08-18T12:25:34.644586" level="INFO">Waited for Element with selector input[name="email"] at state visible</msg>
-<arg>input[name="email"]</arg>
-<arg>visible</arg>
-<arg>timeout=20s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-08-18T12:25:34.589360" elapsed="0.055455"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-08-18T12:25:34.655438" level="INFO">Waited for Element with selector input[name="pass"] at state visible</msg>
-<arg>input[name="pass"]</arg>
-<arg>visible</arg>
-<arg>timeout=20s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-08-18T12:25:34.645307" elapsed="0.010406"/>
-</kw>
-<kw name="Get Title" owner="Browser">
-<msg time="2025-08-18T12:25:34.663555" level="INFO">Title: 'Facebook मध्\u200dये लॉग इन करा'</msg>
-<arg>contains</arg>
-<arg>Facebook</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-08-18T12:25:34.656162" elapsed="0.007672"/>
-</kw>
-<kw name="Get Attribute" owner="Browser">
-<msg time="2025-08-18T12:25:34.705219" level="INFO">Attribute is: 'email'</msg>
-<arg>input[name="email"]</arg>
-<arg>name</arg>
-<arg>==</arg>
-<arg>email</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-08-18T12:25:34.664624" elapsed="0.040784"/>
-</kw>
-<kw name="Get Attribute" owner="Browser">
-<msg time="2025-08-18T12:25:34.723997" level="INFO">Attribute is: 'pass'</msg>
-<arg>input[name="pass"]</arg>
-<arg>name</arg>
-<arg>==</arg>
-<arg>pass</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-08-18T12:25:34.706009" elapsed="0.018443"/>
-</kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2025-08-18T12:25:34.726564" level="INFO">Fills the text 'test@example.com' in the given field.</msg>
-<arg>input[name="email"]</arg>
-<arg>test@example.com</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-08-18T12:25:34.725007" elapsed="0.022798"/>
-</kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2025-08-18T12:25:34.749032" level="INFO">Fills the text 'secret123' in the given field.</msg>
-<arg>input[name="pass"]</arg>
-<arg>secret123</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-08-18T12:25:34.748234" elapsed="0.017061"/>
-</kw>
-<msg time="2025-08-18T12:25:34.795577" level="INFO">Switching context to context=604b296a-30b6-4563-9e50-69ddfda2d6b2 in CURRENT</msg>
-<msg time="2025-08-18T12:25:34.808443" level="INFO">Successfully changed active context: context=604b296a-30b6-4563-9e50-69ddfda2d6b2</msg>
-<msg time="2025-08-18T12:25:34.819143" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2025-08-18T12:25:33.285878" elapsed="1.483291"/>
+<msg time="2025-08-20T20:46:32.244033" level="INFO">Switching context to context=dc585417-f218-48d9-97d2-9e3656e75e8a in CURRENT</msg>
+<msg time="2025-08-20T20:46:32.262324" level="INFO">Successfully changed active context: context=dc585417-f218-48d9-97d2-9e3656e75e8a</msg>
+<msg time="2025-08-20T20:46:32.369861" level="INFO">Successfully closed Context</msg>
+<doc>Verify Facebook shows error for invalid password</doc>
+<status status="FAIL" start="2025-08-20T20:46:26.310130" elapsed="5.884485">Keyword 'Browser.Wait For Elements State' expected 1 to 4 arguments, got 0.</status>
 </test>
-<status status="PASS" start="2025-08-18T12:25:27.064015" elapsed="7.757290"/>
+<status status="FAIL" start="2025-08-20T20:46:25.955523" elapsed="6.434088"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Testcase1" id="s1" pass="2" fail="0" skip="0">Testcase1</stat>
+<stat name="Testcase4" id="s1" pass="0" fail="1" skip="0">Testcase4</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-08-18T12:25:33.286136" level="WARN">Multiple tests with name 'Verify Username And Password Fields' executed in suite 'Testcase1'.</msg>
 </errors>
 </robot>
