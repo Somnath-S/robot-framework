@@ -1,104 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-20T20:46:25.952619" rpa="false" schemaversion="5">
-<suite id="s1" name="Testcase4" source="D:\mindmerge\Robot framework\github\two\testcase4.robot">
-<test id="s1-t1" name="Login With Invalid Password" line="26">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-21T15:13:22.444405" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcase5" source="D:\mindmerge\Robot framework\github\two\testcase5.robot">
+<test id="s1-t1" name="Login With Empty Fields" line="47">
+<kw name="Open Facebook Login Page">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-08-20T20:46:26.314002" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\mindmerge\\Robot framework\\github\\two\\browser\\traces\\temp\\1a1c0507-c878-4de0-994a-9b4029e6a3f3"}</msg>
-<msg time="2025-08-20T20:46:26.370026" level="INFO">Starting Browser process C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:63015</msg>
-<msg time="2025-08-20T20:46:28.484875" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\mindmerge\\Robot framework\\github\\two\\browser\\traces\\temp\\1a1c0507-c878-4de0-994a-9b4029e6a3f3"}</msg>
-<arg>chromium</arg>
-<arg>headless=False</arg>
+<msg time="2025-08-21T15:13:22.811918" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\mindmerge\\Robot framework\\github\\two\\browser\\traces\\temp\\bb13dee9-a85f-46a0-ae44-447a2da048b2"}</msg>
+<msg time="2025-08-21T15:13:22.848884" level="INFO">Starting Browser process C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:63663</msg>
+<msg time="2025-08-21T15:13:25.009599" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\mindmerge\\Robot framework\\github\\two\\browser\\traces\\temp\\bb13dee9-a85f-46a0-ae44-447a2da048b2"}</msg>
+<arg>${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-08-20T20:46:26.312479" elapsed="2.172766"/>
+<status status="PASS" start="2025-08-21T15:13:22.810793" elapsed="2.199202"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-08-20T20:46:32.043892" level="INFO">Successfully initialized new page object and opened url: https://www.facebook.com/login/</msg>
-<msg time="2025-08-20T20:46:32.044026" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
-<arg>${URL}</arg>
+<msg time="2025-08-21T15:13:29.889795" level="INFO">Successfully initialized new page object and opened url: https://www.facebook.com/login.php</msg>
+<msg time="2025-08-21T15:13:29.890226" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${LOGIN_URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-08-20T20:46:28.505036" elapsed="3.539329"/>
+<status status="PASS" start="2025-08-21T15:13:25.010476" elapsed="4.880784"/>
 </kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2025-08-20T20:46:32.046648" level="INFO">Fills the text 'testuser@example.com' in the given field.</msg>
-<arg>input#email</arg>
-<arg>${USERNAME}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-08-20T20:46:32.045570" elapsed="0.104708"/>
+<status status="PASS" start="2025-08-21T15:13:22.809710" elapsed="7.082451"/>
 </kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2025-08-20T20:46:32.153326" level="INFO">Fills the text 'wrongpassword' in the given field.</msg>
-<arg>input#pass</arg>
-<arg>${PASSWORD}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-08-20T20:46:32.151174" elapsed="0.030438"/>
-</kw>
+<kw name="Login Without Credentials">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-08-20T20:46:32.183009" level="FAIL">Keyword 'Browser.Wait For Elements State' expected 1 to 4 arguments, got 0.</msg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="FAIL" start="2025-08-20T20:46:32.182104" elapsed="0.000994">Keyword 'Browser.Wait For Elements State' expected 1 to 4 arguments, got 0.</status>
-</kw>
-<kw name="Click" owner="Browser">
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-08-20T20:46:32.184909" elapsed="0.000806"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<arg>css=div._9ay7</arg>
+<msg time="2025-08-21T15:13:29.999287" level="INFO">Waited for Element with selector input[name="email"] at state visible</msg>
+<arg>${EMAIL_FIELD}</arg>
 <arg>visible</arg>
 <arg>5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="NOT RUN" start="2025-08-20T20:46:32.187461" elapsed="0.001507"/>
+<status status="PASS" start="2025-08-21T15:13:29.912501" elapsed="0.086982"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-08-21T15:13:30.015827" level="INFO">Waited for Element with selector input[name="pass"] at state visible</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>visible</arg>
+<arg>5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-08-21T15:13:29.999785" elapsed="0.016372"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-08-21T15:13:30.018670" level="INFO">Clicks the element 'button[name="login"]'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-08-21T15:13:30.016552" elapsed="0.824163"/>
+</kw>
+<status status="PASS" start="2025-08-21T15:13:29.910763" elapsed="0.930263"/>
+</kw>
+<kw name="Verify Error Message">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-08-21T15:13:31.073930" level="INFO">Waited for Element with selector div._9ay7 at state visible</msg>
+<arg>${ERROR_DIV}</arg>
+<arg>visible</arg>
+<arg>5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-08-21T15:13:30.885913" elapsed="0.188306"/>
 </kw>
 <kw name="Get Text" owner="Browser">
-<var>${error}</var>
-<arg>css=div._9ay7</arg>
+<msg time="2025-08-21T15:13:31.208105" level="INFO">Text: "The email address or mobile number you entered isn't connected to an account. Find your account and log in."</msg>
+<msg time="2025-08-21T15:13:31.208506" level="INFO">${error_msg} = The email address or mobile number you entered isn't connected to an account. Find your account and log in.</msg>
+<var>${error_msg}</var>
+<arg>${ERROR_DIV}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-08-20T20:46:32.190418" elapsed="0.000451"/>
+<status status="PASS" start="2025-08-21T15:13:31.074559" elapsed="0.134063"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-21T15:13:31.210208" level="INFO">Error text shown: The email address or mobile number you entered isn't connected to an account. Find your account and log in.</msg>
+<arg>Error text shown: ${error_msg}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-21T15:13:31.209110" elapsed="0.001377"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
-<arg>${error}</arg>
-<arg>incorrect</arg>
+<arg>${error_msg}</arg>
+<arg>${EXPECTED_ERROR_PART}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="NOT RUN" start="2025-08-20T20:46:32.191411" elapsed="0.000331"/>
+<status status="PASS" start="2025-08-21T15:13:31.211074" elapsed="0.001534"/>
 </kw>
+<status status="PASS" start="2025-08-21T15:13:30.884648" elapsed="0.328417"/>
+</kw>
+<kw name="Close Facebook Browser">
 <kw name="Close Browser" owner="Browser">
+<msg time="2025-08-21T15:13:32.472455" level="INFO">Closed browser</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-08-20T20:46:32.192816" elapsed="0.000544"/>
+<status status="PASS" start="2025-08-21T15:13:31.218063" elapsed="1.254718"/>
 </kw>
-<msg time="2025-08-20T20:46:32.244033" level="INFO">Switching context to context=dc585417-f218-48d9-97d2-9e3656e75e8a in CURRENT</msg>
-<msg time="2025-08-20T20:46:32.262324" level="INFO">Successfully changed active context: context=dc585417-f218-48d9-97d2-9e3656e75e8a</msg>
-<msg time="2025-08-20T20:46:32.369861" level="INFO">Successfully closed Context</msg>
-<doc>Verify Facebook shows error for invalid password</doc>
-<status status="FAIL" start="2025-08-20T20:46:26.310130" elapsed="5.884485">Keyword 'Browser.Wait For Elements State' expected 1 to 4 arguments, got 0.</status>
+<status status="PASS" start="2025-08-21T15:13:31.216161" elapsed="1.256851"/>
+</kw>
+<doc>Verify Facebook shows error when trying to login without entering email or password</doc>
+<status status="PASS" start="2025-08-21T15:13:22.808353" elapsed="9.665456"/>
 </test>
-<status status="FAIL" start="2025-08-20T20:46:25.955523" elapsed="6.434088"/>
+<status status="PASS" start="2025-08-21T15:13:22.447128" elapsed="10.042948"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Testcase4" id="s1" pass="0" fail="1" skip="0">Testcase4</stat>
+<stat name="Testcase5" id="s1" pass="1" fail="0" skip="0">Testcase5</stat>
 </suite>
 </statistics>
 <errors>
